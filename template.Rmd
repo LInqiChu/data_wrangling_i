@@ -9,6 +9,14 @@ library(readxl)
 library(haven)
 ```
 
+```{r}
+# install.packages("devtools")
+devtools::install_github("ropensci/skimr")
+devtools::install_github("ropensci/skimr", ref = "develop")
+
+```
+
+
 Let's import a dataset.
 
 ```{r}
@@ -16,6 +24,7 @@ litters_df =
   read_csv("data_import_examples/FAS_litters.csv")
 
 ```
+
 Look at your data!!
 
 ```{r}
@@ -34,15 +43,13 @@ Look at the data!!
 ```{r}
 litters_df
 
-
-
 ```
+
+# skimming data is neat?
 
 ```{r}
 skimr:skim(litters_df)
-
-
-
+# 算了！
 ```
 
 ## Fix the missingness
@@ -50,7 +57,6 @@ skimr:skim(litters_df)
 ```{r}
 litters_df = 
   read_csv("data_import_examples/FAS_litters.csv", na = c("NA",".",""))
-
 
 ```
 
@@ -68,6 +74,7 @@ pups_df =
 
 
 ```
+
 ## What about excel
 
 CSVs are really great but sometimes you get an excel file
@@ -111,7 +118,6 @@ litters_df_base =
 
 ```{r}
 write.csv(fotr_df, "data/fotr.csv")
-
 
 ```
 
