@@ -1,0 +1,46 @@
+---
+title: "dashboard"
+output: html_document
+date: "2025-10-21"
+---
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+
+```
+
+## load the AirBnB dataset
+
+```{r}
+data(nyc_airbnb)
+
+nyc_airbnb = 
+  nyc_airbnb |> 
+  mutate(rating = review_scores_location / 2) |>
+  select(
+    neighbourhood_group, neighbourhood, rating, price, room_type, lat, long) |>
+  filter(
+    !is.na(rating), 
+    neighbourhood_group == "Manhattan",
+    room_type == "Entire home/apt",
+    price %in% 100:500)
+
+
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r}
+
+
+
+
+
+```
