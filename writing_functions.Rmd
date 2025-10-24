@@ -1,0 +1,30 @@
+---
+title: "writing_functions"
+output: html_document
+date: "2025-10-23"
+---
+
+```{r}
+library(tidyverse)
+library(rvest)
+
+set.seed(1)
+```
+
+```{r}
+x_vec = rnorm(25, mean = 5, sd = 3)
+
+(x_vec - mean(x_vec)) / sd(x_vec)
+
+```
+
+write a function to compute z scores
+
+```{r}
+z_scores = function(x) {
+  z = (x - mean(x)) / sd(x)
+  z
+}
+
+z_scores(x_vec)
+```
