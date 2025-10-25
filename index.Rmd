@@ -7,6 +7,21 @@ output:
     theme: cerulean
 ---
 
-# This is Jeff's awesome website
+# This is Linqi Chu's awesome website
+
 
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+
+# Here is a subsection
+
+And here is some addition text 
+
+
+
+
+
+# Link to page within the site
+
+[About me](about.html)
+
