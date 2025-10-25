@@ -7,9 +7,7 @@ output:
     theme: cerulean
 ---
 
-
 # This page has information about me
 
-I am a first-year student majoring in Biostatistics.
-
+I am a first-year graduate student majoring in Biostatistics.
 
