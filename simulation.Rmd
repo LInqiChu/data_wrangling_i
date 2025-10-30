@@ -7,7 +7,7 @@ date: "2025-10-30"
 ```{r}
 library(tidyverse)
 
-source("source/sim_mean_sd.R")
+source("sim_mean_sd.R")
 ```
 
 
@@ -32,9 +32,24 @@ for (i in 1:100){
 
 output |>
   bind_rows() |>
-  ggplot(aes(x = mu_hat)) |>
+  ggplot(aes(x = mu_hat)) +
   geom_density()
 
+
+```
+
+try to repeat with a map statement
+
+```{r}
+sim_results_df = 
+  expand_grid(
+    sample_size = 30,
+    iter = 1:100
+  ) |>
+  mutate(
+    results = map(sample_size, sim_mean_sd)
+  ) |>
+  unnest(results)
 
 ```
 
