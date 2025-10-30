@@ -54,7 +54,6 @@ nyc_airbnb |>
     x = ~neighbourhood, y = ~price, color = ~neighbourhood, 
     type = "box", colors = "viridis")
 
-
 ```
 
 ```{r}
